@@ -5,10 +5,9 @@
 </template>
 
 <script>
-import "leaflet/dist/leaflet.css"
-import L from "leaflet"
+import 'leaflet/dist/leaflet.css'
+import L from 'leaflet'
 import eventBus from '../main.js'
-
 
 export default {
   name: 'Map',
@@ -17,7 +16,7 @@ export default {
       latitude: '',
       longitude: '',
       center: [59.436962, 24.753574]
-    };
+    }
   },
   methods: {
     setupLeafletMap: function () {
@@ -37,7 +36,6 @@ export default {
         maxNativeZoom: 19
       }).addTo(mapDiv)
 
-
       const marker = L.marker();
 
       function onMapClick(e) {
@@ -49,8 +47,8 @@ export default {
       eventBus.$on('sendFormToMap', (data) => {
         marker.setLatLng(data)
         marker.addTo(mapDiv)
-        var latLngs = [ marker.getLatLng() ];
-        var markerBounds = L.latLngBounds(latLngs);
+        const latLngs = [marker.getLatLng()];
+        const markerBounds = L.latLngBounds(latLngs);
         mapDiv.fitBounds(markerBounds);
       })
       mapDiv.on('click', onMapClick)
@@ -58,7 +56,6 @@ export default {
   },
   mounted() {
     this.setupLeafletMap();
-
   },
 }
 </script>

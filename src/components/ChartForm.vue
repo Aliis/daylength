@@ -1,6 +1,5 @@
 <template>
   <b-container>
-
     <b-form @submit.prevent="onSubmit">
 
       <b-row>
@@ -44,11 +43,11 @@
 </template>
 
 <script>
-import eventBus from "@/main"
+import eventBus from '@/main'
 
 export default {
-  name: "ChartForm",
-  data() {
+  name: 'ChartForm',
+  data: function() {
     return {
       latitude: '59.436962',
       longitude: '24.753574',
@@ -89,6 +88,7 @@ export default {
   },
 }
 </script>
+
 <style scoped>
 .submit {
   margin-bottom: 40px;

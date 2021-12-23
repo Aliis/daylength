@@ -3,12 +3,11 @@
 </template>
 
 <script>
-
-import eventBus from "@/main"
+import eventBus from '@/main'
 
 export default {
   name: 'Chart',
-  data() {
+  data: function() {
     return {
       chartData: {}
     }

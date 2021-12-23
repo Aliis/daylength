@@ -11,8 +11,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue)
 Vue.prototype.$suncalc = suncalc
 Vue.use(Chartkick.use(Chart))
-
 Vue.config.productionTip = false
+
 const eventBus = new Vue()
 export default eventBus
 new Vue({

@@ -1,6 +1,5 @@
 <template>
   <b-container>
-
     <b-form @submit.prevent="onSubmit">
 
       <b-row>
@@ -71,7 +70,7 @@ export default {
         sundown: '',
         dayLength: '',
         isResultCalculated: false,
-      };
+      }
   },
   methods: {
     onSubmit: function() {
@@ -111,7 +110,6 @@ export default {
 }
 .submit {
   margin: 30px 0;
-  float: right;
 }
 div {
   text-align: left;
